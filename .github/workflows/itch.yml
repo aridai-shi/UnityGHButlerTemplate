@@ -164,8 +164,9 @@ jobs:
   web:
     name: Web
     runs-on: ubuntu-latest
+    if: env.RELEASE_WEB==true
     steps:
-      if: ${{ env.RELEASE_WEB==true }}
+      
       # Checkout
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -214,8 +215,8 @@ jobs:
   android:
     name: Android
     runs-on: ubuntu-latest
+    if: env.RELEASE_ANDROID==true
     steps:
-      if: ${{ env.RELEASE_ANDROID==true }}
       # Checkout
       - name: Checkout repository
         uses: actions/checkout@v2
