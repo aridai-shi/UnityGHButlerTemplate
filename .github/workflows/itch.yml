@@ -11,7 +11,7 @@ env:
   RELEASE_WEB: ${{ false }} #set to  true if you want to enable automatic html export
 
 jobs:
-  build:
+  windows:
     name: Windows
     runs-on: ubuntu-latest
     steps:
@@ -61,6 +61,7 @@ jobs:
           ITCH_GAME: ${{ secrets.ITCH_GAME }}
           ITCH_USER: ${{ secrets.ITCH_USER }}
           PACKAGE: itch.zip
+  mac:
     name: Mac
     runs-on: ubuntu-latest
     steps:
@@ -110,6 +111,7 @@ jobs:
           ITCH_GAME: ${{ secrets.ITCH_GAME }}
           ITCH_USER: ${{ secrets.ITCH_USER }}
           PACKAGE: itch.zip
+  linux:
     name: Linux
     runs-on: ubuntu-latest
     steps:
@@ -159,6 +161,7 @@ jobs:
           ITCH_GAME: ${{ secrets.ITCH_GAME }}
           ITCH_USER: ${{ secrets.ITCH_USER }}
           PACKAGE: itch.zip
+  web:
     name: Web
     runs-on: ubuntu-latest
     if: ${{ env.RELEASE_WEB==true }}
@@ -209,6 +212,7 @@ jobs:
           ITCH_GAME: ${{ secrets.ITCH_GAME }}
           ITCH_USER: ${{ secrets.ITCH_USER }}
           PACKAGE: itch.zip
+  android:
     name: Android
     runs-on: ubuntu-latest
     if: ${{ env.RELEASE_ANDROID==true }}
