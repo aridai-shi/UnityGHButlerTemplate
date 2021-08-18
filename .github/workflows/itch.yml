@@ -9,7 +9,7 @@ on:
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
   RELEASE_ANDROID: ${{ false }} #set to  true if you want to enable automatic android release export
-  RELEASE_WEB: ${{ false }} #set to  true if you want to enable automatic html export
+  RELEASE_WEB: ${{ true }} #set to  true if you want to enable automatic html export
 
 jobs:
   windows:
