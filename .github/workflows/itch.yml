@@ -164,7 +164,6 @@ jobs:
   web:
     name: Web
     runs-on: ubuntu-latest
-    if: env.RELEASE_WEB==true
     steps:
       
       # Checkout
@@ -188,6 +187,7 @@ jobs:
       # Build
       - name: Build project
         uses: game-ci/unity-builder@v2
+        if: ${{ env.RELEASE_WEB==true }}
         with:
           unityVersion: 2020.3.15f2
           targetPlatform: WebGL
@@ -215,7 +215,6 @@ jobs:
   android:
     name: Android
     runs-on: ubuntu-latest
-    if: env.RELEASE_ANDROID==true
     steps:
       # Checkout
       - name: Checkout repository
@@ -237,7 +236,8 @@ jobs:
 
       # Build
       - name: Build project
-        uses: game-ci/unity-builder@v2
+        uses: game-ci/unity-builder@v2  
+        if: ${{ env.RELEASE_ANDROID==true }}
         with:
           unityVersion: 2020.3.15f2
           targetPlatform: Android
