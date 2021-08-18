@@ -8,8 +8,8 @@ on:
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-  RELEASE_ANDROID: ${{ false }} #set to  true if you want to enable automatic android release export
-  RELEASE_WEB: ${{ true }} #set to  true if you want to enable automatic html export
+  RELEASE_ANDROID: 'no' #set to 'yes' if you want to enable automatic android export, i know this is a string but bools don't work
+  RELEASE_WEB: 'yes' #set to 'yes' if you want to enable automatic html export, i know this is a string but bools don't work
 
 jobs:
   windows:
@@ -188,7 +188,7 @@ jobs:
       # Build
       - name: Build project
         uses: game-ci/unity-builder@v2
-        if: ${{ env.RELEASE_WEB==true }}
+        if: ${{ env.RELEASE_WEB=='yes' }}
         with:
           unityVersion: 2020.3.16f1
           targetPlatform: WebGL
