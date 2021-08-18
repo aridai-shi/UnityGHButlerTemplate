@@ -32,13 +32,13 @@ jobs:
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
         with:
-          unityVersion: 2020.3.15f2
+          unityVersion: 2020.3.16f1
 
       # Build
       - name: Build project
         uses: game-ci/unity-builder@v2
         with:
-          unityVersion: 2020.3.15f2
+          unityVersion: 2020.3.16f1
           targetPlatform: StandaloneWindows64 
 
       # Output 
@@ -82,13 +82,13 @@ jobs:
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
         with:
-          unityVersion: 2020.3.15f2
+          unityVersion: 2020.3.16f1
 
       # Build
       - name: Build project
         uses: game-ci/unity-builder@v2
         with:
-          unityVersion: 2020.3.15f2
+          unityVersion: 2020.3.16f1
           targetPlatform: StandaloneOSX
 
       # Output 
@@ -132,13 +132,13 @@ jobs:
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
         with:
-          unityVersion: 2020.3.15f2
+          unityVersion: 2020.3.16f1
 
       # Build
       - name: Build project
         uses: game-ci/unity-builder@v2
         with:
-          unityVersion: 2020.3.15f2
+          unityVersion: 2020.3.16f1
           targetPlatform: StandaloneLinux64
 
       # Output 
@@ -182,14 +182,14 @@ jobs:
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
         with:
-          unityVersion: 2020.3.15f2
+          unityVersion: 2020.3.16f1
 
       # Build
       - name: Build project
         uses: game-ci/unity-builder@v2
         if: ${{ env.RELEASE_WEB==true }}
         with:
-          unityVersion: 2020.3.15f2
+          unityVersion: 2020.3.16f1
           targetPlatform: WebGL
 
       # Output 
@@ -232,14 +232,14 @@ jobs:
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
         with:
-          unityVersion: 2020.3.15f2
+          unityVersion: 2020.3.16f1
 
       # Build
       - name: Build project
         uses: game-ci/unity-builder@v2  
         if: ${{ env.RELEASE_ANDROID==true }}
         with:
-          unityVersion: 2020.3.15f2
+          unityVersion: 2020.3.16f1
           targetPlatform: Android
 
       # Output 
