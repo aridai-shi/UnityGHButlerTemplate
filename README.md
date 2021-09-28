@@ -5,7 +5,7 @@
 
   
 
-A 2D template with a workflow that exports releases to itch.io. Follow this configuration guide to get a project up and running with the capability to push changes to itch in no time flat!
+A 2D template with a workflow that exports releases to itch.io. Follow this configuration guide to get a project up and running with the capability to push changes to itch in no time flat! **NOTE: If you need a 3D project, just copy the .github folder to an empty new 3D Unity project, and set up a Github repo from that folder. If you need to change versions, look into the workflows themselves to adjust the version there.**
 
 ## 1. Get your Unity license!
 
